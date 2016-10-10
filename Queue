@@ -1,0 +1,37 @@
+import java.util.LinkedList;
+
+public class Queue {
+
+	private LinkedList<Integer> list = new LinkedList<Integer>();
+
+	public void enqueue(Integer item) {
+		list.addLast(item);
+	}
+
+	public Integer dequeue() {
+		return list.poll();
+	}
+
+	public boolean is_empty() {
+		return list.isEmpty();
+	};
+
+	public Integer get_front() {
+		return list.element();
+	};
+
+	public boolean has_items() {
+		return !list.isEmpty();
+	}
+
+	public int size() {
+		return list.size();
+	}
+	
+	public void print() {
+		LinkedList<Integer> listToPrint = list;
+		while(!list.isEmpty()){
+			System.out.println(listToPrint.poll());
+		}
+	};
+}
